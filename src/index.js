@@ -1,5 +1,5 @@
-import Text from './text'
+import Text from './text';
+import AMComponent from './amComponent';
 
-export {
-    Text
-}
+export default AMComponent;
+export { Text };
