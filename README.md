@@ -33,7 +33,7 @@ class MyComponent extends AMComponent {
 
 Text utils for React. ``nl2br`` is a React exclusive function to convert string newlines to ``<br/>`` tags.
 
-The other functions can be found in an newer verstion in the [js-lib]
+The other functions can be found in an newer verstion in the [js-lib](https://github.com/app-masters/js-lib).
 
 
 # Change Log
