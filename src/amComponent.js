@@ -1,9 +1,11 @@
 import { Component } from 'react';
+import _ from 'lodash';
 
 class AMComponent extends Component {
-    setInput (param) {
-        this.setState((state) => {
-            state.input = Object.assign(state.input, param);
+    setInput (key, value) {
+        this.setState(state => {
+            key = 'input.' + key;
+            _.set(state, key, value);
             return state;
         });
     }
