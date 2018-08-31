@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+
+## [1.0.3] - 2017-11-22
+### Added
+- Markdown component added to exports
+
 ## [1.0.3] - 2017-11-22
 ### Changed
 - AMComponent setInput is now ('key', value), and key can use the dot notation ('key.child')
