@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.3] - 2017-11-22
+### Changed
+- Changed markdown to go from h3 to h6 and video to auto size
 
 ## [1.0.3] - 2017-11-22
 ### Added

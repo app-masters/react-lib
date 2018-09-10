@@ -121,16 +121,10 @@ class Markdown extends React.Component {
                 if (line !== repl) {
                     switch (size) {
                         case 1:
-                            return <h1 key={index}>{repl}</h1>
-                        case 2:
-                            return <h2 key={index}>{repl}</h2>
-                        case 3:
                             return <h3 key={index}>{repl}</h3>
-                        case 4:
+                        case 2:
                             return <h4 key={index}>{repl}</h4>
-                        case 5:
-                            return <h5 key={index}>{repl}</h5>
-                        case 6:
+                        case 3:
                             return <h6 key={index}>{repl}</h6>
                     }
                 }
@@ -152,7 +146,7 @@ class Markdown extends React.Component {
                         return p1.replace('watch?v=','');
                     });
                     if (link !== repl) {
-                        return <iframe key={key} width="560" height="315" src={`https://www.youtube.com/embed/${link}`} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        return <iframe key={key} width="100%" height="auto" src={`https://www.youtube.com/embed/${link}`} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     } else {
                         return <img key={key} src={repl} />
                     }
