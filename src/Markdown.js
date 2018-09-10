@@ -1,21 +1,20 @@
 import React from 'react';
 
-const Minus = (props) => (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 42 42" {...props}>
-        <path fill={props.fill || 'black'} d="M0 19h42v4H0z" />
-    </svg>)
+const Minus = (props) => (<svg aria-hidden="true" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14" xmlns="http://www.w3.org/2000/svg" height={props.height || '1em'} width={props.width || '1em'} viewBox="0 0 448 512">
+    <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
+</svg>)
 
-const Plus = (props) => (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 42 42" {...props}>
-        <path fill={props.fill || 'black'} d="M42 19H23V0h-4v19H0v4h19v19h4V23h19z" />
-    </svg>)
+const Plus = (props) => (<svg aria-hidden="true" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14" xmlns="http://www.w3.org/2000/svg" height={props.height || '1em'} width={props.width || '1em'} viewBox="0 0 448 512">
+    <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
+</svg>)
 
-const Check = (props) => (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 42 42" {...props}>
-        <path fill={props.fill || 'black'} stroke-width="12.144" d="M14.2 35.387L39.395 10.19l-2.94-2.94L14.2 29.509l-8.818-8.819-2.94 2.94z" />
-    </svg>)
+const Check = (props) => (<svg aria-hidden="true" data-prefix="fas" data-icon="check" class="svg-inline--fa fa-check fa-w-16" xmlns="http://www.w3.org/2000/svg" height={props.height || '1em'} width={props.width || '1em'} viewBox="0 0 512 512">
+    <path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z" />
+</svg>)
 
-
-const Star = (props) => (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 55.867 55.867" {...props}>
-        <path d="M55.818 21.578a1.002 1.002 0 0 0-.808-.681l-18.09-2.629-8.09-16.392a.998.998 0 0 0-1.792 0l-8.091 16.393-18.09 2.629a1.002 1.002 0 0 0-.555 1.705l13.091 12.76-3.091 18.018c-.064.375.09.754.397.978a.992.992 0 0 0 1.053.076l16.182-8.506 16.18 8.506a1 1 0 0 0 1.451-1.054l-3.09-18.017 13.091-12.761c.272-.267.37-.664.252-1.025z" />
-    </svg>)
+const Star = (props) => (<svg aria-hidden="true" data-prefix="fas" data-icon="asterisk" class="svg-inline--fa fa-asterisk fa-w-16" xmlns="http://www.w3.org/2000/svg" height={props.height || '1em'} width={props.width || '1em'} viewBox="0 0 512 512">
+    <path fill="currentColor" d="M478.21 334.093L336 256l142.21-78.093c11.795-6.477 15.961-21.384 9.232-33.037l-19.48-33.741c-6.728-11.653-21.72-15.499-33.227-8.523L296 186.718l3.475-162.204C299.763 11.061 288.937 0 275.48 0h-38.96c-13.456 0-24.283 11.061-23.994 24.514L216 186.718 77.265 102.607c-11.506-6.976-26.499-3.13-33.227 8.523l-19.48 33.741c-6.728 11.653-2.562 26.56 9.233 33.037L176 256 33.79 334.093c-11.795 6.477-15.961 21.384-9.232 33.037l19.48 33.741c6.728 11.653 21.721 15.499 33.227 8.523L216 325.282l-3.475 162.204C212.237 500.939 223.064 512 236.52 512h38.961c13.456 0 24.283-11.061 23.995-24.514L296 325.282l138.735 84.111c11.506 6.976 26.499 3.13 33.227-8.523l19.48-33.741c6.728-11.653 2.563-26.559-9.232-33.036z" />
+</svg>)
 
 
 class Markdown extends React.Component {
@@ -101,7 +100,7 @@ class Markdown extends React.Component {
                 });
                 if (line !== repl) {
                     const [text, link] = repl.split('::');
-                    return <a key={index}href={link} target='_blank' style={this.anchorStyle}>{text}</a>
+                    return <a key={index} href={link} target='_blank' style={this.anchorStyle}>{text}</a>
                 }
                 return line;
             }
@@ -143,7 +142,7 @@ class Markdown extends React.Component {
                 });
                 if (line !== repl) {
                     const link = repl.replace(/^(?:https?\:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.?be)\/(.+)$/, (match, p1) => {
-                        return p1.replace('watch?v=','');
+                        return p1.replace('watch?v=', '');
                     });
                     if (link !== repl) {
                         return <iframe key={key} width="560" height="315" src={`https://www.youtube.com/embed/${link}`} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

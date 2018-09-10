@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.9] - 2017-11-22
+### Changed
+- Changed icons to font-awesome svgs
+
 ## [1.0.8] - 2017-11-22
 ### Changed
 - Changed markdown iframe size
