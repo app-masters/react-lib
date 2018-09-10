@@ -146,7 +146,7 @@ class Markdown extends React.Component {
                         return p1.replace('watch?v=','');
                     });
                     if (link !== repl) {
-                        return <iframe key={key} width="560" height="350" style={{height: '50.25%', width: '100%'}} src={`https://www.youtube.com/embed/${link}`} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        return <iframe key={key} width="560" height="315" src={`https://www.youtube.com/embed/${link}`} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     } else {
                         return <img key={key} src={repl} />
                     }
