@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Minus = (props) => (<svg style={props.style || {}} aria-hidden="true" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14" xmlns="http://www.w3.org/2000/svg" height={props.height || '1em'} width={props.width || '1em'} viewBox="0 0 448 512">
-    <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
+const Minus = (props) => (<svg style={props.style || {}} xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="svg-inline--fa fa-minus fa-w-14" data-icon="minus" data-prefix="fas" height={props.height || '1em'} width={props.width || '1em'} viewBox="0 0 448 512">
+<path fill="currentColor" d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
 </svg>)
 
 const Plus = (props) => (<svg style={props.style || {}} aria-hidden="true" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14" xmlns="http://www.w3.org/2000/svg" height={props.height || '1em'} width={props.width || '1em'} viewBox="0 0 448 512">
