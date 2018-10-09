@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.2] - 2017-11-22
+### Changed
+- Changed into Babel 7
+
 ## [1.0.12] - 2017-11-22
 ### Changed
 - Markdown no longer generates extra paragraphs for extra line breaks
