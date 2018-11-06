@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Minus = (props) => (<svg style={props.style || {}} xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="svg-inline--fa fa-minus fa-w-14" data-icon="minus" data-prefix="fas" height={props.height || '1em'} width={props.width || '1em'} viewBox="0 0 448 512">
-<path fill="currentColor" d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
+    <path fill="currentColor" d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
 </svg>)
 
 const Plus = (props) => (<svg style={props.style || {}} aria-hidden="true" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14" xmlns="http://www.w3.org/2000/svg" height={props.height || '1em'} width={props.width || '1em'} viewBox="0 0 448 512">
@@ -145,9 +145,13 @@ class Markdown extends React.Component {
                         return p1.replace('watch?v=', '');
                     });
                     if (link !== repl) {
-                        return <iframe key={key} width="560" height="315" src={`https://www.youtube.com/embed/${link}`} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        return <div className="markdown-iframe-wrapper">
+                            <iframe key={key} width="560" height="315" src={`https://www.youtube.com/embed/${link}`} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
                     } else {
-                        return <img key={key} src={repl} />
+                        return <div className="markdown-image-wrapper">
+                            <img key={key} src={repl} />
+                        </div>
                     }
                 }
                 return line;

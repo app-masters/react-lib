@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.24] - 2017-11-22
+### Changed
+- Added wrapper divs to media components to allow better stlying
+
 ## [1.0.2] - 2017-11-22
 ### Changed
 - Changed into Babel 7
