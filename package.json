@@ -1,6 +1,6 @@
 {
   "name": "@app-masters/react-lib",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -11,10 +11,8 @@
   },
   "author": "",
   "license": "ISC",
-  "peerDependencies": {
-    "react": "^16.0.0"
-  },
   "devDependencies": {
+    "react": "*",
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
