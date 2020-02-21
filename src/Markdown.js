@@ -271,7 +271,11 @@ class Markdown extends React.Component {
   finish = () => {
     return this.lines.map((line, key) => {
       if (typeof line === "string" && line.trim().length !== 0) {
-        return <p key={key}>{line}</p>;
+        return (
+          <p key={key} style={this.props.style}>
+            {line}
+          </p>
+        );
       }
       return line;
     });
