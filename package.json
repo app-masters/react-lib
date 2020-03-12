@@ -1,13 +1,12 @@
 {
   "name": "@app-masters/react-lib",
-  "version": "1.0.29",
+  "version": "1.0.31",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist/ && rm -rf node_modules/",
     "build": "npm run clean && npm install && babel src/ -d dist/",
-    "publish": "npm publish --access public && git push origin master",
     "prepublishOnly": "npm run build"
   },
   "author": "",

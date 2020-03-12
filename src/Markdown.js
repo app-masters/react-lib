@@ -108,7 +108,7 @@ class Markdown extends React.Component {
         return line !== repl ? (
           <li style={this.liStyle}>
             <Star style={this.iconStyle} />
-            {repl}
+            {this.matchLink(repl)}
           </li>
         ) : (
           line
@@ -128,7 +128,7 @@ class Markdown extends React.Component {
         return line !== repl ? (
           <li style={this.liStyle}>
             <Minus style={this.iconStyle} />
-            {repl}
+            {this.matchLink(repl)}
           </li>
         ) : (
           line
@@ -148,7 +148,7 @@ class Markdown extends React.Component {
         return line !== repl ? (
           <li style={this.liStyle}>
             <Plus style={this.iconStyle} />
-            {repl}
+            {this.matchLink(repl)}
           </li>
         ) : (
           line
@@ -168,7 +168,7 @@ class Markdown extends React.Component {
         return line !== repl ? (
           <li style={this.liStyle}>
             <Check style={this.iconStyle} />
-            {repl}
+            {this.matchLink(repl)}
           </li>
         ) : (
           line
@@ -177,29 +177,32 @@ class Markdown extends React.Component {
     });
     return this;
   };
-  matchLink = lines => {
-    this.lines = this.lines.map((line, index) => {
-      if (typeof line !== "string") {
-        return line;
-      } else {
-        const repl = line.replace(
-          /\[([^\[\]]*)\]\(([^()]*\.[^.()]{2,})\)/,
-          (match, p1, p2) => {
-            return `${p1}::${p2}`;
-          }
-        );
-        if (line !== repl) {
-          const [text, link] = repl.split("::");
+  matchLink = line => {
+    const linkRegex = /\[([^\[\]]*)\]\(([^\(\)]*)\)/;
+    // SIZE = quantidade de grupos de captura no regex + 1 para string base
+    const SIZE = 3;
+    const splitString = line.split(linkRegex);
+    let mappedStrings = [];
+    while (splitString.length > 0)
+      mappedStrings.push(splitString.splice(0, SIZE));
+    return (
+      <div>
+        {mappedStrings.map((arr, i) => {
+          // Se não encontrou match retorne primeira string
+          if (arr.length !== 3) return arr[0];
+          const [base, text, href] = arr;
           return (
-            <a key={index} href={link} target="_blank" style={this.anchorStyle}>
-              {text}
-            </a>
+            <>
+              {base}
+              <a href={href} target="_blank" rel="noopener noreferrer">
+                {text}
+              </a>
+            </>
           );
-        }
-        return line;
-      }
-    });
-    return this;
+        })}
+      </div>
+    );
+    return "";
   };
   matchHeader = lines => {
     this.lines = this.lines.map((line, index) => {
@@ -214,11 +217,11 @@ class Markdown extends React.Component {
         if (line !== repl) {
           switch (size) {
             case 1:
-              return <h3 key={index}>{repl}</h3>;
+              return <h3 key={index}>{this.matchLink(repl)}</h3>;
             case 2:
-              return <h4 key={index}>{repl}</h4>;
+              return <h4 key={index}>{this.matchLink(repl)}</h4>;
             case 3:
-              return <h6 key={index}>{repl}</h6>;
+              return <h6 key={index}>{this.matchLink(repl)}</h6>;
           }
         }
         return line;
@@ -273,7 +276,7 @@ class Markdown extends React.Component {
       if (typeof line === "string" && line.trim().length !== 0) {
         return (
           <p key={key} style={this.props.style}>
-            {line}
+            {this.matchLink(line)}
           </p>
         );
       }
@@ -287,7 +290,6 @@ class Markdown extends React.Component {
       .matchStar()
       .matchMinus()
       .matchPlus()
-      .matchLink()
       .matchHeader()
       .matchCheck()
       .matchMedia()
